@@ -8,6 +8,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'Georgia',
+        splashColor: Colors.yellowAccent, //butona tıklanınca renk değişimini.
+        //sağ alttaki buttonun arkaplan rengini değiştirmeye yarar
+        colorScheme: ColorScheme.fromSwatch(
+            accentColor: Colors.greenAccent, primarySwatch: Colors.yellow),
+        scaffoldBackgroundColor: Colors.blue,
+      ),
+      debugShowCheckedModeBanner: false,
       home: InputPage(),
     );
   }
